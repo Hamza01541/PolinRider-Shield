@@ -79,8 +79,10 @@ jobs:
 
           while IFS= read -r file; do
             [ -f "$file" ] || continue
-            # Skip documentation and workflow files that legitimately contain these strings
+            # Skip documentation, workflow files, and scanner implementations that
+            # legitimately contain these strings as detection rules.
             echo "$file" | grep -qE "README|LICENSE|\.md$|\.yml$|\.yaml$|\.txt$" && continue
+            echo "$file" | grep -qE "^(Mac/mac-polinrider-scanner\.sh|windows/windows-polinrider-sheild\.bat)$" && continue
             for sig in "${SIGNATURES[@]}"; do
               if grep -qE "$sig" "$file" 2>/dev/null; then
                 echo "::error file=$file::Known malware signature found: $sig"
