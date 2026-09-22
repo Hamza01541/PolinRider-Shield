@@ -1,6 +1,6 @@
-# PolinRider Shield 🛡️
+# PolinRider Shield 🛡️ — npm Supply Chain Attack Scanner for Windows & macOS
 
-A Windows and macOS security tool for the **PolinRider/Lazarus Group npm supply chain attack**.
+A Windows and macOS security scanner and lockdown tool for the **PolinRider npm supply chain attack** (DPRK **Lazarus Group** / **BlueNoroff**). Detects malicious `.vscode/tasks.json` `folderOpen` triggers, fake `fa-solid-400.woff2` font payloads, infected git history, and C2 persistence — then hardens npm, VS Code, Cursor, and your firewall against reinfection.
 
 - **Windows:** Full scanner and lockdown tool - detects threats and automatically applies protections
 - **macOS:** Forensic scanner only - detects threats, manual lockdown steps required
@@ -9,12 +9,23 @@ A Windows and macOS security tool for the **PolinRider/Lazarus Group npm supply 
 
 ## Downloads
 
-| Platform | File |
-|---|---|
-| 🪟 Windows | [windows-polinrider-sheild.bat](https://raw.githubusercontent.com/Hamza01541/polinrider-shield/master/windows/windows-polinrider-sheild.bat) |
-| 🍎 macOS | [mac-polinrider-scanner.sh](https://raw.githubusercontent.com/Hamza01541/polinrider-shield/master/Mac/mac-polinrider-scanner.sh) |
+[**Install on Windows**](https://raw.githubusercontent.com/Hamza01541/polinrider-shield/master/windows/windows-polinrider-sheild.bat)
 
-> Right-click a link and choose "Save link as..." (or use `curl -O <link>`) to download the script directly.
+[**Install on macOS**](https://raw.githubusercontent.com/Hamza01541/polinrider-shield/master/Mac/mac-polinrider-scanner.sh)
+
+---
+
+## Am I infected?
+
+You may be affected if any of these are true:
+
+- A repo you cloned contains `.vscode/tasks.json` with a `folderOpen` trigger
+- You see a `fa-solid-400.woff2` or `fa-solid-500.woff2` file outside a real font directory
+- Your repo has `temp_auto_push.bat`, `temp_interactive_push.bat`, or `branch_structure.json`
+- Your git history contains commits you did not make
+- Your machine connects to `166.88.134.62`, `198.105.127.210`, `23.27.202.27`, or `166.88.54.158`
+
+Run the scanner for your platform above to check all of these at once. If anything is flagged, see [If you find an infection](#if-you-find-an-infection).
 
 ---
 

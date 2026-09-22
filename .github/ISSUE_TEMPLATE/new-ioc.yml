@@ -1,0 +1,67 @@
+name: Report a new IoC
+description: Report a new indicator of compromise for the PolinRider campaign
+title: "[IoC] "
+labels: ["ioc", "threat-intel"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing an indicator of compromise. Please include a source so the signature can be verified before it is added to the scanners — unverified signatures cause false positives.
+
+        Reporting a vulnerability in the scanner itself? Use a [private security advisory](https://github.com/Hamza01541/polinrider-shield/security/advisories/new) instead.
+
+  - type: dropdown
+    id: ioc-type
+    attributes:
+      label: IoC type
+      options:
+        - Malicious filename or path
+        - Malware signature in a config file
+        - C2 IP address or domain
+        - Payload execution artifact
+        - Persistence mechanism
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: indicator
+    attributes:
+      label: The indicator
+      description: The exact filename, signature string, IP, or path.
+      placeholder: |
+        fa-solid-400.woff2
+        166.88.134.62
+      render: text
+    validations:
+      required: true
+
+  - type: input
+    id: source
+    attributes:
+      label: Source
+      description: An advisory, writeup, or infected repository where this was observed.
+      placeholder: https://threats.wiz.io/...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform observed on
+      multiple: true
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - Not platform specific
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: How it was found, what it does, and any false-positive risk you are aware of.
+    validations:
+      required: false
