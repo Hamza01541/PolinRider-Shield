@@ -1,6 +1,8 @@
-# PolinRider Shield 🛡️ — npm Supply Chain Attack Scanner for Windows & macOS
+# PolinRider Shield: npm Supply Chain Malware Scanner for Windows and macOS
 
-A Windows and macOS security scanner and lockdown tool for the **PolinRider npm supply chain attack** (DPRK **Lazarus Group** / **BlueNoroff**). Detects malicious `.vscode/tasks.json` `folderOpen` triggers, fake `fa-solid-400.woff2` font payloads, infected git history, and C2 persistence — then hardens npm, VS Code, Cursor, and your firewall against reinfection.
+PolinRider Shield is an open-source malware scanner and incident-response tool for detecting **PolinRider npm supply-chain attack** indicators of compromise in developer workstations and Git repositories. It identifies malicious VS Code and Cursor tasks, fake font payloads, infected Git history, and command-and-control persistence.
+
+Use it to investigate suspected npm supply-chain infections and harden affected development environments. The Windows tool scans and applies protective lockdown measures; the macOS tool performs a read-only forensic scan with guided manual remediation.
 
 - **Windows:** Full scanner and lockdown tool - detects threats and automatically applies protections
 - **macOS:** Forensic scanner only - detects threats, manual lockdown steps required
