@@ -11,7 +11,7 @@ Use it to investigate suspected npm supply-chain infections and harden affected 
 
 ## Downloads
 
-[**Install on Windows**](https://raw.githubusercontent.com/Hamza01541/polinrider-shield/master/windows/windows-polinrider-sheild.bat)
+[**Install on Windows**](https://raw.githubusercontent.com/Hamza01541/polinrider-shield/master/windows/windows-polinrider-shield.bat)
 
 [**Install on macOS**](https://raw.githubusercontent.com/Hamza01541/polinrider-shield/master/Mac/mac-polinrider-scanner.sh)
 
@@ -58,7 +58,7 @@ PolinRider is a supply chain attack campaign attributed to the **DPRK Lazarus Gr
 
 | File | Platform | Scan | Lockdown |
 |---|---|---|---|
-| [`windows/windows-polinrider-sheild.bat`](https://raw.githubusercontent.com/Hamza01541/polinrider-shield/master/windows/windows-polinrider-sheild.bat) | Windows | ✅ | ✅ Automatic |
+| [`windows/windows-polinrider-shield.bat`](https://raw.githubusercontent.com/Hamza01541/polinrider-shield/master/windows/windows-polinrider-shield.bat) | Windows | ✅ | ✅ Automatic |
 | [`Mac/mac-polinrider-scanner.sh`](https://raw.githubusercontent.com/Hamza01541/polinrider-shield/master/Mac/mac-polinrider-scanner.sh) | macOS | ✅ | ❌ Manual steps required |
 | `.github/workflows/security-scan.yml` | GitHub Actions | ✅ | ❌ |
 
@@ -66,7 +66,7 @@ PolinRider is a supply chain attack campaign attributed to the **DPRK Lazarus Gr
 
 ---
 
-## Windows (`windows-polinrider-sheild.bat`)
+## Windows (`windows-polinrider-shield.bat`)
 
 ### Requirements
 - Windows 10 or 11
@@ -74,7 +74,7 @@ PolinRider is a supply chain attack campaign attributed to the **DPRK Lazarus Gr
 - Run as Administrator for full protection
 
 ### How to run
-1. Download [`windows/windows-polinrider-sheild.bat`](https://raw.githubusercontent.com/Hamza01541/polinrider-shield/master/windows/windows-polinrider-sheild.bat)
+1. Download [`windows/windows-polinrider-shield.bat`](https://raw.githubusercontent.com/Hamza01541/polinrider-shield/master/windows/windows-polinrider-shield.bat)
 2. Right-click the file
 3. Select **Run as administrator**
 4. Press any key to start
